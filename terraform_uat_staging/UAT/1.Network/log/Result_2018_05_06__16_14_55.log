@@ -1,0 +1,720 @@
+==================================Start Terraform Initialzation=========================================
+
+[0m[1mInitializing provider plugins...[0m
+
+The following providers do not have any version constraints in configuration,
+so the latest version was installed.
+
+To prevent automatic upgrades to new major versions that may contain breaking
+changes, it is recommended to add version = "..." constraints to the
+corresponding provider blocks in configuration, with the constraint strings
+suggested below.
+
+* provider.aws: version = "~> 1.17"
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
+====================================Start Validate Terraform============================================
+====================================Start Terraform Planning============================================
+[0m[1mRefreshing Terraform state in-memory prior to plan...[0m
+The refreshed state will be used to calculate this plan, but will not be
+persisted to local or remote state storage.
+[0m
+
+------------------------------------------------------------------------
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[32m  [32m+[0m [32maws_eip.scblf_eipinterfaceuat1_1a
+[0m      id:                                          <computed>
+      allocation_id:                               <computed>
+      association_id:                              <computed>
+      domain:                                      <computed>
+      instance:                                    <computed>
+      network_interface:                           "${aws_network_interface.scblf_netinterfaceuat1_1a.id}"
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1a"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_eipinterfaceuat1_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+      vpc:                                         "true"
+[0m
+[0m[32m  [32m+[0m [32maws_eip.scblf_eipinterfaceuat2_1a
+[0m      id:                                          <computed>
+      allocation_id:                               <computed>
+      association_id:                              <computed>
+      domain:                                      <computed>
+      instance:                                    <computed>
+      network_interface:                           "${aws_network_interface.scblf_netinterfaceuat2_1a.id}"
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1a"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_eipinterfaceuat2_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+      vpc:                                         "true"
+[0m
+[0m[32m  [32m+[0m [32maws_eip.scblf_eipinterfaceuat3_1a
+[0m      id:                                          <computed>
+      allocation_id:                               <computed>
+      association_id:                              <computed>
+      domain:                                      <computed>
+      instance:                                    <computed>
+      network_interface:                           "${aws_network_interface.scblf_netinterfaceuat3_1a.id}"
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1a"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_eipinterfaceuat3_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+      vpc:                                         "true"
+[0m
+[0m[32m  [32m+[0m [32maws_eip.scblf_eipnatuat_1a
+[0m      id:                                          <computed>
+      allocation_id:                               <computed>
+      association_id:                              <computed>
+      domain:                                      <computed>
+      instance:                                    <computed>
+      network_interface:                           <computed>
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1a"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_eipnatuat_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+      vpc:                                         "true"
+[0m
+[0m[32m  [32m+[0m [32maws_eip.scblf_eipnatuat_1b
+[0m      id:                                          <computed>
+      allocation_id:                               <computed>
+      association_id:                              <computed>
+      domain:                                      <computed>
+      instance:                                    <computed>
+      network_interface:                           <computed>
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1b"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_eipnatuat_1b"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+      vpc:                                         "true"
+[0m
+[0m[32m  [32m+[0m [32maws_eip.scblf_eipnatuat_1c
+[0m      id:                                          <computed>
+      allocation_id:                               <computed>
+      association_id:                              <computed>
+      domain:                                      <computed>
+      instance:                                    <computed>
+      network_interface:                           <computed>
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1c"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_eipnatuat_1c"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+      vpc:                                         "true"
+[0m
+[0m[32m  [32m+[0m [32maws_internet_gateway.igwuat
+[0m      id:                                          <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "none"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblife-uat-igw"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "none"
+      vpc_id:                                      "${aws_vpc.vpcuat.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_nat_gateway.aws_nat_gateway
+[0m      id:                                          <computed>
+      allocation_id:                               "${aws_eip.scblf_eipnatuat_1a.id}"
+      network_interface_id:                        <computed>
+      private_ip:                                  <computed>
+      public_ip:                                   <computed>
+      subnet_id:                                   "${aws_subnet.subnet_privateuat_1a.id}"
+      tags.%:                                      "6"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_natgwuat_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+[0m
+[0m[32m  [32m+[0m [32maws_network_interface.scblf_netinterfaceuat1_1a
+[0m      id:                                          <computed>
+      attachment.#:                                <computed>
+      private_dns_name:                            <computed>
+      private_ip:                                  <computed>
+      private_ips.#:                               <computed>
+      private_ips_count:                           <computed>
+      security_groups.#:                           <computed>
+      source_dest_check:                           "true"
+      subnet_id:                                   "${aws_subnet.subnet_publicuat_1a.id}"
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1a"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_netinterfaceuat1_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+[0m
+[0m[32m  [32m+[0m [32maws_network_interface.scblf_netinterfaceuat2_1a
+[0m      id:                                          <computed>
+      attachment.#:                                <computed>
+      private_dns_name:                            <computed>
+      private_ip:                                  <computed>
+      private_ips.#:                               <computed>
+      private_ips_count:                           <computed>
+      security_groups.#:                           <computed>
+      source_dest_check:                           "true"
+      subnet_id:                                   "${aws_subnet.subnet_publicuat_1a.id}"
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1a"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_netinterfaceuat2_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+[0m
+[0m[32m  [32m+[0m [32maws_network_interface.scblf_netinterfaceuat3_1a
+[0m      id:                                          <computed>
+      attachment.#:                                <computed>
+      private_dns_name:                            <computed>
+      private_ip:                                  <computed>
+      private_ips.#:                               <computed>
+      private_ips_count:                           <computed>
+      security_groups.#:                           <computed>
+      source_dest_check:                           "true"
+      subnet_id:                                   "${aws_subnet.subnet_publicuat_1a.id}"
+      tags.%:                                      "7"
+      tags.AZ:                                     "ap-southeast-1a"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_netinterfaceuat3_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+[0m
+[0m[32m  [32m+[0m [32maws_route53_zone.route53uat
+[0m      id:                                          <computed>
+      comment:                                     "Managed by Terraform"
+      force_destroy:                               "false"
+      name:                                        "scblife-uat.local"
+      name_servers.#:                              <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "none"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblife-uat-route53zone"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "none"
+      vpc_id:                                      "${aws_vpc.vpcuat.id}"
+      vpc_region:                                  "ap-southeast-1"
+      zone_id:                                     <computed>
+[0m
+[0m[32m  [32m+[0m [32maws_route_table.scblf_rtbuat_private
+[0m      id:                                          <computed>
+      propagating_vgws.#:                          <computed>
+      route.#:                                     "1"
+      route.~1228903551.cidr_block:                "0.0.0.0/0"
+      route.~1228903551.egress_only_gateway_id:    ""
+      route.~1228903551.gateway_id:                ""
+      route.~1228903551.instance_id:               ""
+      route.~1228903551.ipv6_cidr_block:           ""
+      route.~1228903551.nat_gateway_id:            "${aws_nat_gateway.aws_nat_gateway.id}"
+      route.~1228903551.network_interface_id:      ""
+      route.~1228903551.vpc_peering_connection_id: ""
+      tags.%:                                      "6"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_rtbuat_private"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "none"
+      vpc_id:                                      "${aws_vpc.vpcuat.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_route_table.scblf_rtbuat_public
+[0m      id:                                          <computed>
+      propagating_vgws.#:                          <computed>
+      route.#:                                     "1"
+      route.~492983012.cidr_block:                 "0.0.0.0/0"
+      route.~492983012.egress_only_gateway_id:     ""
+      route.~492983012.gateway_id:                 "${aws_internet_gateway.igwuat.id}"
+      route.~492983012.instance_id:                ""
+      route.~492983012.ipv6_cidr_block:            ""
+      route.~492983012.nat_gateway_id:             ""
+      route.~492983012.network_interface_id:       ""
+      route.~492983012.vpc_peering_connection_id:  ""
+      tags.%:                                      "6"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblf_rtbuat_public"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "none"
+      vpc_id:                                      "${aws_vpc.vpcuat.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_route_table_association.scblf_rtbassuat_private
+[0m      id:                                          <computed>
+      route_table_id:                              "${aws_route_table.scblf_rtbuat_private.id}"
+      subnet_id:                                   "${aws_subnet.subnet_privateuat_1a.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_route_table_association.scblf_rtbassuat_public
+[0m      id:                                          <computed>
+      route_table_id:                              "${aws_route_table.scblf_rtbuat_public.id}"
+      subnet_id:                                   "${aws_subnet.subnet_publicuat_1a.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_subnet.subnet_privateuat_1a
+[0m      id:                                          <computed>
+      assign_ipv6_address_on_creation:             "false"
+      availability_zone:                           "ap-southeast-1a"
+      cidr_block:                                  "10.21.220.0/26"
+      ipv6_cidr_block:                             <computed>
+      ipv6_cidr_block_association_id:              <computed>
+      map_public_ip_on_launch:                     "false"
+      tags.%:                                      "6"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "subnet_privateuat_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "private"
+      vpc_id:                                      "${aws_vpc.vpcuat.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_subnet.subnet_publicuat_1a
+[0m      id:                                          <computed>
+      assign_ipv6_address_on_creation:             "false"
+      availability_zone:                           "ap-southeast-1a"
+      cidr_block:                                  "10.21.220.64/27"
+      ipv6_cidr_block:                             <computed>
+      ipv6_cidr_block_association_id:              <computed>
+      map_public_ip_on_launch:                     "false"
+      tags.%:                                      "6"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "subnet_publicuat_1a"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "public"
+      vpc_id:                                      "${aws_vpc.vpcuat.id}"
+[0m
+[0m[32m  [32m+[0m [32maws_vpc.vpcuat
+[0m      id:                                          <computed>
+      assign_generated_ipv6_cidr_block:            "false"
+      cidr_block:                                  "10.21.220.0/25"
+      default_network_acl_id:                      <computed>
+      default_route_table_id:                      <computed>
+      default_security_group_id:                   <computed>
+      dhcp_options_id:                             <computed>
+      enable_classiclink:                          <computed>
+      enable_classiclink_dns_support:              <computed>
+      enable_dns_hostnames:                        "true"
+      enable_dns_support:                          "true"
+      instance_tenancy:                            <computed>
+      ipv6_association_id:                         <computed>
+      ipv6_cidr_block:                             <computed>
+      main_route_table_id:                         <computed>
+      tags.%:                                      "7"
+      tags.AZ:                                     "none"
+      tags.Category:                               "network"
+      tags.Environment:                            "uat"
+      tags.Module:                                 "none"
+      tags.Name:                                   "scblife-uat-vpc"
+      tags.Region:                                 "ap-southeast-1"
+      tags.Zone:                                   "none"
+[0m
+[0m
+[0m[1mPlan:[0m 19 to add, 0 to change, 0 to destroy.[0m
+
+------------------------------------------------------------------------
+
+This plan was saved to: tfplan
+
+To perform exactly these actions, run the following command to apply:
+    terraform apply "tfplan"
+
+=====================================Start Terraform Apply==============================================
+[0m[1maws_eip.scblf_eipnatuat_1a: Creating...[0m
+  allocation_id:     "" => "<computed>"
+  association_id:    "" => "<computed>"
+  domain:            "" => "<computed>"
+  instance:          "" => "<computed>"
+  network_interface: "" => "<computed>"
+  private_ip:        "" => "<computed>"
+  public_ip:         "" => "<computed>"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1a"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_eipnatuat_1a"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"
+  vpc:               "" => "true"[0m
+[0m[1maws_eip.scblf_eipnatuat_1c: Creating...[0m
+  allocation_id:     "" => "<computed>"
+  association_id:    "" => "<computed>"
+  domain:            "" => "<computed>"
+  instance:          "" => "<computed>"
+  network_interface: "" => "<computed>"
+  private_ip:        "" => "<computed>"
+  public_ip:         "" => "<computed>"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1c"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_eipnatuat_1c"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"
+  vpc:               "" => "true"[0m
+[0m[1maws_vpc.vpcuat: Creating...[0m
+  assign_generated_ipv6_cidr_block: "" => "false"
+  cidr_block:                       "" => "10.21.220.0/25"
+  default_network_acl_id:           "" => "<computed>"
+  default_route_table_id:           "" => "<computed>"
+  default_security_group_id:        "" => "<computed>"
+  dhcp_options_id:                  "" => "<computed>"
+  enable_classiclink:               "" => "<computed>"
+  enable_classiclink_dns_support:   "" => "<computed>"
+  enable_dns_hostnames:             "" => "true"
+  enable_dns_support:               "" => "true"
+  instance_tenancy:                 "" => "<computed>"
+  ipv6_association_id:              "" => "<computed>"
+  ipv6_cidr_block:                  "" => "<computed>"
+  main_route_table_id:              "" => "<computed>"
+  tags.%:                           "" => "7"
+  tags.AZ:                          "" => "none"
+  tags.Category:                    "" => "network"
+  tags.Environment:                 "" => "uat"
+  tags.Module:                      "" => "none"
+  tags.Name:                        "" => "scblife-uat-vpc"
+  tags.Region:                      "" => "ap-southeast-1"
+  tags.Zone:                        "" => "none"[0m
+[0m[1maws_eip.scblf_eipnatuat_1b: Creating...[0m
+  allocation_id:     "" => "<computed>"
+  association_id:    "" => "<computed>"
+  domain:            "" => "<computed>"
+  instance:          "" => "<computed>"
+  network_interface: "" => "<computed>"
+  private_ip:        "" => "<computed>"
+  public_ip:         "" => "<computed>"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1b"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_eipnatuat_1b"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"
+  vpc:               "" => "true"[0m
+[0m[1maws_eip.scblf_eipnatuat_1a: Creation complete after 1s (ID: eipalloc-0d761c98c89530ce3)[0m[0m
+[0m[1maws_eip.scblf_eipnatuat_1b: Creation complete after 1s (ID: eipalloc-008c292edee9364de)[0m[0m
+[0m[1maws_eip.scblf_eipnatuat_1c: Creation complete after 1s (ID: eipalloc-0fb77ac2c57ccffba)[0m[0m
+[0m[1maws_vpc.vpcuat: Creation complete after 4s (ID: vpc-07063505e54a65c7a)[0m[0m
+[0m[1maws_internet_gateway.igwuat: Creating...[0m
+  tags.%:           "0" => "7"
+  tags.AZ:          "" => "none"
+  tags.Category:    "" => "network"
+  tags.Environment: "" => "uat"
+  tags.Module:      "" => "none"
+  tags.Name:        "" => "scblife-uat-igw"
+  tags.Region:      "" => "ap-southeast-1"
+  tags.Zone:        "" => "none"
+  vpc_id:           "" => "vpc-07063505e54a65c7a"[0m
+[0m[1maws_subnet.subnet_publicuat_1a: Creating...[0m
+  assign_ipv6_address_on_creation: "" => "false"
+  availability_zone:               "" => "ap-southeast-1a"
+  cidr_block:                      "" => "10.21.220.64/27"
+  ipv6_cidr_block:                 "" => "<computed>"
+  ipv6_cidr_block_association_id:  "" => "<computed>"
+  map_public_ip_on_launch:         "" => "false"
+  tags.%:                          "" => "6"
+  tags.Category:                   "" => "network"
+  tags.Environment:                "" => "uat"
+  tags.Module:                     "" => "none"
+  tags.Name:                       "" => "subnet_publicuat_1a"
+  tags.Region:                     "" => "ap-southeast-1"
+  tags.Zone:                       "" => "public"
+  vpc_id:                          "" => "vpc-07063505e54a65c7a"[0m
+[0m[1maws_route53_zone.route53uat: Creating...[0m
+  comment:          "" => "Managed by Terraform"
+  force_destroy:    "" => "false"
+  name:             "" => "scblife-uat.local"
+  name_servers.#:   "" => "<computed>"
+  tags.%:           "" => "7"
+  tags.AZ:          "" => "none"
+  tags.Category:    "" => "network"
+  tags.Environment: "" => "uat"
+  tags.Module:      "" => "none"
+  tags.Name:        "" => "scblife-uat-route53zone"
+  tags.Region:      "" => "ap-southeast-1"
+  tags.Zone:        "" => "none"
+  vpc_id:           "" => "vpc-07063505e54a65c7a"
+  vpc_region:       "" => "ap-southeast-1"
+  zone_id:          "" => "<computed>"[0m
+[0m[1maws_subnet.subnet_privateuat_1a: Creating...[0m
+  assign_ipv6_address_on_creation: "" => "false"
+  availability_zone:               "" => "ap-southeast-1a"
+  cidr_block:                      "" => "10.21.220.0/26"
+  ipv6_cidr_block:                 "" => "<computed>"
+  ipv6_cidr_block_association_id:  "" => "<computed>"
+  map_public_ip_on_launch:         "" => "false"
+  tags.%:                          "" => "6"
+  tags.Category:                   "" => "network"
+  tags.Environment:                "" => "uat"
+  tags.Module:                     "" => "none"
+  tags.Name:                       "" => "subnet_privateuat_1a"
+  tags.Region:                     "" => "ap-southeast-1"
+  tags.Zone:                       "" => "private"
+  vpc_id:                          "" => "vpc-07063505e54a65c7a"[0m
+[0m[1maws_internet_gateway.igwuat: Creation complete after 1s (ID: igw-08d31e45faa640654)[0m[0m
+[0m[1maws_route_table.scblf_rtbuat_public: Creating...[0m
+  propagating_vgws.#:                         "" => "<computed>"
+  route.#:                                    "" => "1"
+  route.1069390747.cidr_block:                "" => "0.0.0.0/0"
+  route.1069390747.egress_only_gateway_id:    "" => ""
+  route.1069390747.gateway_id:                "" => "igw-08d31e45faa640654"
+  route.1069390747.instance_id:               "" => ""
+  route.1069390747.ipv6_cidr_block:           "" => ""
+  route.1069390747.nat_gateway_id:            "" => ""
+  route.1069390747.network_interface_id:      "" => ""
+  route.1069390747.vpc_peering_connection_id: "" => ""
+  tags.%:                                     "" => "6"
+  tags.Category:                              "" => "network"
+  tags.Environment:                           "" => "uat"
+  tags.Module:                                "" => "none"
+  tags.Name:                                  "" => "scblf_rtbuat_public"
+  tags.Region:                                "" => "ap-southeast-1"
+  tags.Zone:                                  "" => "none"
+  vpc_id:                                     "" => "vpc-07063505e54a65c7a"[0m
+[0m[1maws_subnet.subnet_publicuat_1a: Creation complete after 1s (ID: subnet-0b0eabcbcc0e81407)[0m[0m
+[0m[1maws_network_interface.scblf_netinterfaceuat3_1a: Creating...[0m
+  attachment.#:      "" => "<computed>"
+  private_dns_name:  "" => "<computed>"
+  private_ip:        "" => "<computed>"
+  private_ips.#:     "" => "<computed>"
+  private_ips_count: "" => "<computed>"
+  security_groups.#: "" => "<computed>"
+  source_dest_check: "" => "true"
+  subnet_id:         "" => "subnet-0b0eabcbcc0e81407"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1a"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_netinterfaceuat3_1a"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"[0m
+[0m[1maws_network_interface.scblf_netinterfaceuat2_1a: Creating...[0m
+  attachment.#:      "" => "<computed>"
+  private_dns_name:  "" => "<computed>"
+  private_ip:        "" => "<computed>"
+  private_ips.#:     "" => "<computed>"
+  private_ips_count: "" => "<computed>"
+  security_groups.#: "" => "<computed>"
+  source_dest_check: "" => "true"
+  subnet_id:         "" => "subnet-0b0eabcbcc0e81407"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1a"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_netinterfaceuat2_1a"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"[0m
+[0m[1maws_network_interface.scblf_netinterfaceuat1_1a: Creating...[0m
+  attachment.#:      "" => "<computed>"
+  private_dns_name:  "" => "<computed>"
+  private_ip:        "" => "<computed>"
+  private_ips.#:     "" => "<computed>"
+  private_ips_count: "" => "<computed>"
+  security_groups.#: "" => "<computed>"
+  source_dest_check: "" => "true"
+  subnet_id:         "" => "subnet-0b0eabcbcc0e81407"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1a"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_netinterfaceuat1_1a"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"[0m
+[0m[1maws_subnet.subnet_privateuat_1a: Creation complete after 2s (ID: subnet-08c346fc06bfab2e4)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Creating...[0m
+  allocation_id:        "" => "eipalloc-0d761c98c89530ce3"
+  network_interface_id: "" => "<computed>"
+  private_ip:           "" => "<computed>"
+  public_ip:            "" => "<computed>"
+  subnet_id:            "" => "subnet-08c346fc06bfab2e4"
+  tags.%:               "" => "6"
+  tags.Category:        "" => "network"
+  tags.Environment:     "" => "uat"
+  tags.Module:          "" => "none"
+  tags.Name:            "" => "scblf_natgwuat_1a"
+  tags.Region:          "" => "ap-southeast-1"
+  tags.Zone:            "" => "public"[0m
+[0m[1maws_route_table.scblf_rtbuat_public: Creation complete after 1s (ID: rtb-0f17f35361109035e)[0m[0m
+[0m[1maws_route_table_association.scblf_rtbassuat_public: Creating...[0m
+  route_table_id: "" => "rtb-0f17f35361109035e"
+  subnet_id:      "" => "subnet-0b0eabcbcc0e81407"[0m
+[0m[1maws_network_interface.scblf_netinterfaceuat1_1a: Creation complete after 1s (ID: eni-0604bf324e931cecb)[0m[0m
+[0m[1maws_eip.scblf_eipinterfaceuat1_1a: Creating...[0m
+  allocation_id:     "" => "<computed>"
+  association_id:    "" => "<computed>"
+  domain:            "" => "<computed>"
+  instance:          "" => "<computed>"
+  network_interface: "" => "eni-0604bf324e931cecb"
+  private_ip:        "" => "<computed>"
+  public_ip:         "" => "<computed>"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1a"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_eipinterfaceuat1_1a"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"
+  vpc:               "" => "true"[0m
+[0m[1maws_network_interface.scblf_netinterfaceuat3_1a: Creation complete after 1s (ID: eni-02b4eac039a20c4b5)[0m[0m
+[0m[1maws_network_interface.scblf_netinterfaceuat2_1a: Creation complete after 1s (ID: eni-06a3e71a506b01022)[0m[0m
+[0m[1maws_eip.scblf_eipinterfaceuat3_1a: Creating...[0m
+  allocation_id:     "" => "<computed>"
+  association_id:    "" => "<computed>"
+  domain:            "" => "<computed>"
+  instance:          "" => "<computed>"
+  network_interface: "" => "eni-02b4eac039a20c4b5"
+  private_ip:        "" => "<computed>"
+  public_ip:         "" => "<computed>"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1a"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_eipinterfaceuat3_1a"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"
+  vpc:               "" => "true"[0m
+[0m[1maws_eip.scblf_eipinterfaceuat2_1a: Creating...[0m
+  allocation_id:     "" => "<computed>"
+  association_id:    "" => "<computed>"
+  domain:            "" => "<computed>"
+  instance:          "" => "<computed>"
+  network_interface: "" => "eni-06a3e71a506b01022"
+  private_ip:        "" => "<computed>"
+  public_ip:         "" => "<computed>"
+  tags.%:            "" => "7"
+  tags.AZ:           "" => "ap-southeast-1a"
+  tags.Category:     "" => "network"
+  tags.Environment:  "" => "uat"
+  tags.Module:       "" => "none"
+  tags.Name:         "" => "scblf_eipinterfaceuat2_1a"
+  tags.Region:       "" => "ap-southeast-1"
+  tags.Zone:         "" => "public"
+  vpc:               "" => "true"[0m
+[0m[1maws_route_table_association.scblf_rtbassuat_public: Creation complete after 0s (ID: rtbassoc-09be8c0ffa37ec1be)[0m[0m
+[0m[1maws_eip.scblf_eipinterfaceuat3_1a: Creation complete after 2s (ID: eipalloc-08532694e7b6f3989)[0m[0m
+[0m[1maws_eip.scblf_eipinterfaceuat2_1a: Creation complete after 2s (ID: eipalloc-0ac5de1f6ecefcd9f)[0m[0m
+[0m[1maws_eip.scblf_eipinterfaceuat1_1a: Creation complete after 2s (ID: eipalloc-09768a97fef8de90b)[0m[0m
+[0m[1maws_route53_zone.route53uat: Still creating... (10s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (10s elapsed)[0m[0m
+[0m[1maws_route53_zone.route53uat: Still creating... (20s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (20s elapsed)[0m[0m
+[0m[1maws_route53_zone.route53uat: Still creating... (30s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (30s elapsed)[0m[0m
+[0m[1maws_route53_zone.route53uat: Still creating... (40s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (40s elapsed)[0m[0m
+[0m[1maws_route53_zone.route53uat: Still creating... (50s elapsed)[0m[0m
+[0m[1maws_route53_zone.route53uat: Creation complete after 51s (ID: Z1LVWJHZRQUN2Q)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (50s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (1m0s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (1m10s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (1m20s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (1m30s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Still creating... (1m40s elapsed)[0m[0m
+[0m[1maws_nat_gateway.aws_nat_gateway: Creation complete after 1m41s (ID: nat-0d282aa488da058f4)[0m[0m
+[0m[1maws_route_table.scblf_rtbuat_private: Creating...[0m
+  propagating_vgws.#:                        "" => "<computed>"
+  route.#:                                   "" => "1"
+  route.271567318.cidr_block:                "" => "0.0.0.0/0"
+  route.271567318.egress_only_gateway_id:    "" => ""
+  route.271567318.gateway_id:                "" => ""
+  route.271567318.instance_id:               "" => ""
+  route.271567318.ipv6_cidr_block:           "" => ""
+  route.271567318.nat_gateway_id:            "" => "nat-0d282aa488da058f4"
+  route.271567318.network_interface_id:      "" => ""
+  route.271567318.vpc_peering_connection_id: "" => ""
+  tags.%:                                    "" => "6"
+  tags.Category:                             "" => "network"
+  tags.Environment:                          "" => "uat"
+  tags.Module:                               "" => "none"
+  tags.Name:                                 "" => "scblf_rtbuat_private"
+  tags.Region:                               "" => "ap-southeast-1"
+  tags.Zone:                                 "" => "none"
+  vpc_id:                                    "" => "vpc-07063505e54a65c7a"[0m
+[0m[1maws_route_table.scblf_rtbuat_private: Creation complete after 1s (ID: rtb-0589dd291dc5b4930)[0m[0m
+[0m[1maws_route_table_association.scblf_rtbassuat_private: Creating...[0m
+  route_table_id: "" => "rtb-0589dd291dc5b4930"
+  subnet_id:      "" => "subnet-08c346fc06bfab2e4"[0m
+[0m[1maws_route_table_association.scblf_rtbassuat_private: Creation complete after 0s (ID: rtbassoc-0c5d58bd887c93ec4)[0m[0m
+[0m[1m[32m
+Apply complete! Resources: 19 added, 0 changed, 0 destroyed.[0m
+[0m[1m[32m
+Outputs:
+
+scblf_eipinterfaceuat1_1a = 13.228.160.20
+scblf_eipinterfaceuat2_1a = 13.251.104.60
+scblf_eipinterfaceuat3_1a = 13.250.141.219
+scblf_eipnatuat_1a = 13.251.78.1
+scblf_eipnatuat_1b = 52.77.67.249
+scblf_eipnatuat_1c = 13.251.108.161
+scblf_igw_id = igw-08d31e45faa640654
+scblf_natgwuat_1a = nat-0d282aa488da058f4
+scblf_route53_zoneid = Z1LVWJHZRQUN2Q
+scblf_rtb_private = rtb-0589dd291dc5b4930
+scblf_rtb_public = rtb-0f17f35361109035e
+scblf_subnet_privateuat_1a = subnet-08c346fc06bfab2e4
+scblf_subnet_publicuat_1a = subnet-0b0eabcbcc0e81407
+scblf_vpc_cidr = 10.21.220.0/25
+scblf_vpc_id = vpc-07063505e54a65c7a[0m
+================================Finished Automate Terraform Process=====================================

@@ -1,0 +1,112 @@
+Standard Format Instruction:
+
+0. IAM for Apply Terraform:
+    Standard User:
+        Root ==> Create User: Terraform with Access Key/Secret Key:
+
+1. Network Range:
+UAT: 10.21.220.0/25 (10.21.220.1 - 128)
+
+    DEV: DMZ: 10.21.220.64/27
+                NET: 10.21.220.64 (Reserved)
+                BC: 10.21.220.94 (Reserved)
+                Range: 10.21.220.68 - 10.21.220.93
+                AWS Reserved: 10.21.220.65 (Gateway), 10.21.220.66 (DNS), 10.21.220.67 (Reserve for AWS)
+
+        Internal: 10.21.220.0/26
+                NET: 10.21.220.0 (Reserved)
+                BC: 10.21.220.63 (Reserved)
+                Range: 10.21.220.4 - 10.21.220.62
+                AWS Reserved: 10.21.220.1 (Gateway), 10.21.220.2 (DNS), 10.21.220.3 (Reserve for AWS)
+
+        Spare: 10.21.220.96/27
+                NET: 10.21.220.96
+                BC: 10.21.220.127
+                Range: 10.21.220.97 - 10.21.220.126
+                AWS Reserved: 10.21.220.97 (Gateway), 10.21.220.98 (DNS), 10.21.220.99 (Reserve for AWS)
+
+
+STAGING: 10.21.220.128/25 (10.21.220.129 - 256)
+
+    SIT: DMZ: 10.21.220.192/27
+                NET: 10.21.220.192 (Reserved)
+                BC: 10.21.220.223 (Reserved)
+                Range: 10.21.220.196 - 10.21.220.222
+                AWS Reserved: 10.21.220.193 (Gateway), 10.21.220.194 (DNS), 10.21.220.195 (Reserve for AWS)
+
+        Internal: 10.21.220.128/26
+                NET: 10.21.220.0 (Reserved)
+                BC: 10.21.220.191 (Reserved)
+                Range: 10.21.220.132 - 10.21.220.190
+                AWS Reserved: 10.21.220.129 (Gateway), 10.21.220.130 (DNS), 10.21.220.131 (Reserve for AWS)
+
+        Spare: 10.21.220.224/27
+                NET: 10.21.220.224
+                BC: 10.21.220.255
+                Range: 10.21.220.225 - 10.21.220.254
+                AWS Reserved: 10.21.220.225 (Gateway), 10.21.220.226 (DNS), 10.21.220.227 (Reserve for AWS)
+
+2. Route53 Host Zone:
+    UAT Environment:        scblife-UAT.local
+    STAGING Environment:    scblife-STAGING.local
+
+3. Standard Tag:
+    Environment:            dev/sit/uat/staging/prd/dr/other
+    Region:                 ap-southeast-1
+    AZ:                     ap-southeast-1a/ap-southeast-1b/ap-southeast-1c/none
+    Category:               network/iam/compute/storage
+    Name:                   scblife-<env>-<category>-<shortname>
+    Zone:                   public/private/none (for network)
+    Module:                 <Module Name>/none (for network)
+
+    ################################################################
+    #                           Template                           #
+    ################################################################
+tags {
+    Environment     = "${var.tag_xxxxxx}"
+    Region          = "${var.tag_xxxxxx}"
+    AZ              = "${var.tag_xxxxxx}"
+    Categories      = "${var.tag_xxxxxx}"
+    Name            = "${var.tag_xxxxxx}"
+    Zone            = "${var.tag_xxxxxx}"
+    Module          = "${var.tag_xxxxxx}"
+  }
+
+    ################################################################
+    #                   Standard Name Variable                     #
+    ################################################################
+     Nameing Variable:       tag_<objectname>_<standardtag>
+
+4. Standard Output:
+    4.1 Output for Network:
+        scblf_vpc_id
+        scblf_vpc_cidr
+        scblf_route53_zoneid
+        scblf_igw_id
+        scblf_subnet_publicuat_1a
+        scblf_subnet_privateuat_1a
+        scblf_eipnatuat_1a
+        scblf_eipnatuat_1b
+        scblf_eipnatuat_1c
+        scblf_eipinterfaceuat1_1a
+        scblf_eipinterfaceuat2_1a
+        scblf_eipinterfaceuat3_1a
+        scblf_natgwuat_1a
+        scblf_rtb_private
+        scblf_rtb_public
+
+
+5. Standard Eleastic IP Address:
+    5.1 Elastic IP Address for NAT Gateway
+        - 1 EIP per AZ
+    5.2 Elastic IP Address for Assiciate with Private IP (Public Zone)
+        - 3 EIP per AZ
+        - 3 Private IP Address per AZ to Provide
+
+6. Standard Security Group:
+
+
+
+99. Execution Terraform:
+    - Start Terraform:  ==> start_terraform.sh
+    - Destroy Terraform:==> destroy_terraform.sh 
